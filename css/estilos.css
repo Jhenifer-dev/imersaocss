@@ -1,0 +1,40 @@
+body {
+    background-image: url('https://img.elo7.com.br/product/zoom/29C1895/tecido-degrade-conjunto-unicornio-45-x-90-cm-un02-tema-de-festa-infantil.jpg');
+    background-size:auto 100vh; 
+    font-size: 20px
+      
+  }
+  
+  
+  .menu {
+    background-color:#E0FFFF;
+  }
+  
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+  }
+  
+  .menu li {
+   list-style: none; 
+  }
+  
+  a {
+    color: teal;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .site-subtitle, 
+  .site-title {
+    color:BLACK;
+    text-align: center;
+  }
+  .site-subtitle {
+   font-style: italic;
+  }
