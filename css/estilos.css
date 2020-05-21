@@ -283,11 +283,15 @@ height: calc(50vh - 10em - 48px);
   text-decoration: none;
   text-shadow: 0px 2px 10px rgb(228, 15, 210);
 }
-footer {
+.footer {
+  
+  background-color: rgb(41, 40, 43);
+  padding-bottom: 0.5px;
   text-align: center;
-}
+  font-size: small;}
 
 footer p {
   font-size: 1em;
   color: rgba(233, 19, 233, 0.93);
 }
+
