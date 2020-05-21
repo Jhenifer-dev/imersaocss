@@ -1,40 +1,293 @@
+/* soft reset do css */
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
 body {
-    background-image: url('https://img.elo7.com.br/product/zoom/29C1895/tecido-degrade-conjunto-unicornio-45-x-90-cm-un02-tema-de-festa-infantil.jpg');
-    background-size:auto 100vh; 
-    font-size: 20px
-      
-  }
+    background-image: linear-gradient(to left, rgb(230, 49, 49), rgb(54, 4, 87));
+    background-size: cover; 
+    font-size: 16px;
+    font-family: 'Volkhov', serif;
   
+    }
+
+     @media (min-width: 400px) {
+      body {
+        font-size: 16px;
+      }
+    }
+
+  /* -- cabeçalho -- */
+
+  header {
   
+    height: 100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  /* -- links da navegação -- */
+
+  
+
   .menu {
-    background-color:#E0FFFF;
+     background-image: linear-gradient(-0.2turn, #683499, #d53846, #f86624c9, #f9c80e);
+     position: absolute;
+     border-radius: 0px 0px 30px 30px;
+     width: 100%;
+     top: 0;
+     position: fixed;
+     z-index: 1;
+    /*! color: chartreuse; */
   }
   
   .menu ul {
-    display: flex;
+    
+    display: flex; 
+    /*! margin-left: 3em; */
     justify-content: space-around;
     align-items: center;
-    height: 8vh;
+    height: 5vh;
+  ;
+    
+  }
+ 
+  .menu li {
+   list-style: none;
+
+  
   }
   
-  .menu li {
-   list-style: none; 
+  .menu a {
+    transition: background-color, color, 2s;
+    color: rgb(242, 242, 242);
+    display: block;
+    padding: 10px 20px;
+ 
   }
   
   a {
-    color: teal;
+    color: rgb(94, 121, 202);
     text-decoration: none;
+    
   }
-  
+ 
   a:hover {
     text-decoration: underline;
+    color: rgb(0, 0, 0);
+  
+  }
+  .titulo{
+    transform: scale(0.2) translate(50vh);
+    opacity: 0;
+    animation: cubic-bezier(1,.33,0,.13) 2s animacaoTitulo forwards;
+ 
+   }
+   @keyframes animacaoTitulo{
+    0%{transform: scale(0.2) translate(50vh);
+      opacity: 0;
+
+    }
+   100% {transform: scale(1) translate(0);
+    opacity: 1;
+     } 
+   }
+
+  .site-title,
+  .site-subtitle,
+  .descricao {
+   color:rgb(250, 250, 250);
+   text-align: center;
+   }
+
+   @keyframes typing {
+    from{
+      width: 0;
+    }
+    to{
+      width: 11em;
+    }
+  }
+
+  .site-title {
+    font-size: 6em;
+    font-family: 'Lobster', cursive;
+  }
+
+  .site-subtitle {
+    font-size: 3em;
+   font-style: italic;  
+   font-family:'Playfair Display', serif;
+
+  }
+
+  .site-subtitle span {
+    color: #c8a316;
+}
+
+  .descricao{
+    font-size: 2em;
+   font-style: italic;
+   font-family: 'Playfair Display', serif;
+   position: center;
+  }
+  /* Animação aplicada ao content referente a classe *.descricao* resultando num efeito de cursor piscando. */
+  .descricao:after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+   }
+   
+   
+   @keyframes pisca{
+       0%, 100%{
+           opacity: 1;
+       }
+       50%{
+           opacity: 0;
+       }
+   }
+
+
+  /* -- portfolio -- */
+  
+  .Sobre,
+  .portfolio,
+  .contato { 
+    padding: 5em;
+    min-width: 100vh;
+    
+  }
+
+  @media( min-width:1200px){
+    .container{
+     margin-left: auto;
+      margin-right: auto;
+    }
   }
   
-  .site-subtitle, 
-  .site-title {
-    color:BLACK;
-    text-align: center;
+
+  .Sobre h2, .portfolio h2, .contato{
+  color:#ec440f;
+  margin-bottom: 3em;
+  /*! font-size: 1.5em; */
+   }
+
+
+  .Sobre p {
+    color:rgb(244, 242, 242);
+    margin-bottom: 1em;
+    text-indent: 3em;
+    text-align: justify;
+    
   }
-  .site-subtitle {
-   font-style: italic;
+  .Sobre a{
+    color: rgba(192, 64, 171, 0.63);
+    text-decoration: underline;
   }
+  .Sobre a:hover {
+    background-color: rgba(202, 86, 212, 0.192);
+
+  }
+
+  .Sobre .avatar{
+    clip-path:polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    float: left;
+    width: 65vh;
+    border: 3px solid #662e9b;
+  }
+ 
+  .portfolio .grid {
+    display: grid;
+    gap: 2em ;
+    }
+  
+  @media (min-width: 560px) {
+    .portfolio .grid {
+      grid-template-columns: 240px 240px;
+      }
+    }
+    
+  @media (min-width: 880px) {
+     .portfolio .grid {
+       grid-template-columns: repeat(2, 260px);
+      align-content: center;
+      justify-content: space-around;
+       height: calc(50vh - 8em - 48px - 1.5em);
+      }
+    }
+  
+ 
+  .portfolio figure{
+    text-align: center ;
+
+
+  }
+  .img-portfolio{
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    object-position: left bottom;
+    border-radius: 5%;
+    transition: transform 500ms;
+    /*! border-collapse: inherit; */
+   }
+  .img-portfolio:hover{
+     transform: scale(1.2)rotate(-2deg);
+   }
+   
+
+   
+  /* -- icones -- */
+   .icon {
+    border-radius: 60%;
+    transition: all 1s;
+    cursor: pointer;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+   }
+
+   .icon:hover{
+  -webkit-transform: rotateZ(360deg);
+   transform: rotateZ(360deg);
+   
+  }
+/*contato e icones*/
+
+.grid.icons {
+grid-template-columns: repeat(3,260px);
+display: grid;
+box-sizing: border-box;
+align-content: center;
+justify-content:space-around;
+height: calc(50vh - 10em - 48px);
+}
+
+.contato .icons {
+  text-align: center;
+  
+
+}
+.contato a{
+  color:rgb(255, 255, 255);
+  font-size: 3.0em;
+  transition: text-shadow 1s;
+}
+.contato:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 2px 10px rgb(228, 15, 210);
+}
+footer {
+  text-align: center;
+}
+
+footer p {
+  font-size: 1em;
+  color: rgba(233, 19, 233, 0.93);
+}
