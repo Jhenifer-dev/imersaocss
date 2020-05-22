@@ -213,8 +213,12 @@ a:hover {
 .Sobre .avatar {
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
     float: left;
-    width: 65vh;
     border: 3px solid #8a38d9;
+}
+
+.avatar {
+    height: 40vh;
+    width: 50vh;
 }
 
 .portfolio .grid {
