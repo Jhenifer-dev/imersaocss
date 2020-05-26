@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: linear-gradient(to left, rgb(230, 49, 49), rgb(54, 4, 87));
     background-size: auto 100%;
@@ -86,7 +90,7 @@ header {
 }
 
 a {
-    color: rgb(94, 121, 202);
+    color: rgb(82, 110, 191);
     text-decoration: none;
 }
 
@@ -129,7 +133,7 @@ a:hover {
 }
 
 .site-title {
-    font-size: 6em;
+    font-size: 5em;
     font-family: 'Lobster', cursive;
 }
 
@@ -182,9 +186,16 @@ a:hover {
 
 @media( min-width:1200px) {
     .container {
+        max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+img {
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
 }
 
 .Sobre h2,
@@ -211,15 +222,11 @@ a:hover {
     background-color: rgba(202, 86, 212, 0.192);
 }
 
-.Sobre .avatar {
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-    float: left;
-    /*! border: 3px solid #8a38d9; */
-}
-
-.avatar {
-    height: 40vh;
-    width: 50vh;
+@media (min-width: 600px) {
+    .sobre .avatar {
+        float: right;
+        margin-left: 1em;
+    }
 }
 
 .portfolio .grid {
@@ -233,7 +240,7 @@ a:hover {
     }
 }
 
-@media (min-width: 880px) {
+@media (min-width: 850px) {
     .portfolio .grid {
         grid-template-columns: repeat(2, 260px);
         align-content: center;
@@ -253,7 +260,6 @@ a:hover {
     object-position: left bottom;
     border-radius: 5%;
     transition: transform 500ms;
-    /*! border-collapse: inherit; */
 }
 
 .img-portfolio:hover {
@@ -281,12 +287,12 @@ a:hover {
 /*contato e icones*/
 
 .grid.icons {
-    grid-template-columns: repeat(3, 260px);
+    /*! grid-template-columns: auto; */
     display: grid;
     box-sizing: border-box;
     align-content: center;
     justify-content: space-around;
-    height: calc(50vh - 10em - 48px);
+    height: calc(70vh - 10em - 48px);
 }
 
 .contato .icons {
@@ -314,5 +320,5 @@ a:hover {
 
 footer p {
     font-size: 1em;
-    color: rgba(233, 19, 233, 0.93);
+    color: rgb(115, 108, 115);
 }
